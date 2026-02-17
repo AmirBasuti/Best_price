@@ -10,13 +10,13 @@ public class BestPriceFinder {
         this.shops = shops;
     }
 
-    public List<Quote> findPrices() {
-        List<CompletableFuture<Quote>> futures =  shops.stream()
+    public List<CompletableFuture<Quote>>  findPrices() {
+        return shops.stream()
                 .map(shop -> CompletableFuture.supplyAsync(shop::getPrice))
                 .toList();
 
-        return futures.stream()
-                .map(CompletableFuture::join)
-                .collect(Collectors.toList());
+//        return futures.stream()
+//                .map(CompletableFuture::join)
+//                .collect(Collectors.toList());
     }
 }

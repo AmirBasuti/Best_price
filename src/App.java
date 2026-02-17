@@ -15,7 +15,7 @@ public class App {
         System.out.println("Invoking Async Price Finder...");
         var start = System.nanoTime();
 
-        finder.findPrices(); // This blocks until all are done
+        var tmp = finder.findPrices();
 
         var duration = (System.nanoTime() - start) / 1_000_000;
 

@@ -15,7 +15,7 @@ public class RemoteShop implements Shop{
         System.out.println("Getting a quote from " + name + "...");
         var price = calculatePrice();
         var quote = new Quote(name, price);
-        System.out.println(quote);
+//        System.out.println(quote);
         return quote;
     }
 
