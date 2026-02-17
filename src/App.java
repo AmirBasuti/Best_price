@@ -2,12 +2,12 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        var shops = List.of(
-                new Shop("BestPrice-1"),
-                new Shop("LetsSaveBig-2"),
-                new Shop("MyFavoriteShop-3"),
-                new Shop("BuyItAll-4"),
-                new Shop("ShopEasy-5")
+        List<Shop> shops = List.of(
+                new RemoteShop("BestPrice-1"),
+                new RemoteShop("LetsSaveBig-2"),
+                new RemoteShop("MyFavoriteShop-3"),
+                new RemoteShop("BuyItAll-4"),
+                new RemoteShop("ShopEasy-5")
         );
 
         var finder = new BestPriceFinder(shops);
