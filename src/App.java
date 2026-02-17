@@ -19,7 +19,6 @@ public class App {
 
         var duration = (System.nanoTime() - start) / 1_000_000;
 
-        System.out.println("\n--- Results ---");
 //        quotes.forEach(System.out::println);
         System.out.println("Done in " + duration + " msecs");
 
